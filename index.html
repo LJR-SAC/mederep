@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <link rel="stylesheet" href="medex.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chatbot Médico</title>
+    
+  </head>
+  <body>
+    <div class="chat-container">
+      <div class="logo-header">
+        <img class="side-logo" src="https://tint.creativemarket.com/qbKrjHXW-iDEmisfNfpZJWUFo6ch4MheKxGsS8XjPZM/width:600/height:400/gravity:nowe/rt:fill-down/el:1/czM6Ly9maWxlcy5jcmVhdGl2ZW1hcmtldC5jb20vaW1hZ2VzL3NjcmVlbnNob3RzL3Byb2R1Y3RzLzQ5NDIvNDk0MjAvNDk0MjA2NzUvbWVkaWNhbC1sb2dvOS1vLmpwZw?1700399548" alt="Logo Lateral" width="64" />
+        <img src="421356.png" alt="Logo" width="64">
+        <div class="logo-text">
+          <h1>MED</h1>
+          <h2>Express</h2>
+          <h3>Powered by AI</h3>
+        </div>
+        
+      <img class="side-logo" src="https://tint.creativemarket.com/qbKrjHXW-iDEmisfNfpZJWUFo6ch4MheKxGsS8XjPZM/width:600/height:400/gravity:nowe/rt:fill-down/el:1/czM6Ly9maWxlcy5jcmVhdGl2ZW1hcmtldC5jb20vaW1hZ2VzL3NjcmVlbnNob3RzL3Byb2R1Y3RzLzQ5NDIvNDk0MjAvNDk0MjA2NzUvbWVkaWNhbC1sb2dvOS1vLmpwZw?1700399548" alt="Logo Lateral" width="64" />
+      </div>
+      <div id="chat-log" class="chat-log"></div>
+      <div id="loading-indicator" class="loading-indicator" style="display: none;">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+         Procesando...
+      </div>
+      <form id="chat-form">
+        <input
+          type="text"
+          id="user-input"
+          placeholder="Ingresa tus síntomas... (La respuesta puede tardar unos segundos 😉)"
+          required
+        />
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
