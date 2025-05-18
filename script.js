@@ -1,7 +1,7 @@
 const chatLog = document.getElementById("chat-log");
 const form = document.getElementById("chat-form");
 const userInput = document.getElementById("user-input");
-appendMessage("👨‍⚕️ MedExpress", "¡Hola! 😊 Soy MedExpress, tu guía inicial cuando no te sientes bien. Cuéntame qué síntomas tienes y te orientaré con calma. Recuerda que siempre es importante visitar al médico 👨‍⚕️👩‍⚕️. Ingresa tus síntomas abajo");
+appendMessage("👨‍⚕️ MedExpress", "¡Hola! 😊 Soy MedExpress, tu guía inicial cuando no te sientes bien. Cuéntame qué síntomas tienes y te orientaré con calma. Recuerda que siempre es importante visitar al médico 👨‍⚕️👩‍⚕️. Ingresa tus síntomas abajo ⬇");
 
 const mensajes = [
   {
