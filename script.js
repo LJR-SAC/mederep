@@ -54,7 +54,7 @@ form.addEventListener("submit", async (e) => {
       const parsedContent = parseMarkdownToHTML(content);
       mensajes.push({ role: "assistant", content: parsedContent });
       appendMessage("👨‍⚕️ MedExpress", parsedContent);
-      narrarTexto(content);
+      // narrarTexto(content);
     } else {
       appendMessage("❗Error", "La respuesta del servidor fue vacía.");
     }
