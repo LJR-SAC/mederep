@@ -54,7 +54,7 @@ form.addEventListener("submit", async (e) => {
       const parsedContent = parseMarkdownToHTML(content);
       mensajes.push({ role: "assistant", content: parsedContent });
       appendMessage("👨‍⚕️ MedExpress", parsedContent);
-      narrarTexto(content);
+
     } else {
       appendMessage("❗Error", "La respuesta del servidor fue vacía.");
     }
@@ -62,7 +62,6 @@ form.addEventListener("submit", async (e) => {
     console.error("Error al conectar con el servidor:", error);
     appendMessage("❌ Error", "Hubo un problema al contactar con el servidor.");
   } finally {
-    // Asegura que el indicador de carga se elimina siempre
     const loadingMsg = document.getElementById("loading-message");
     if (loadingMsg) loadingMsg.remove();
   }
@@ -75,11 +74,6 @@ function appendMessage(sender, message) {
   chatLog.appendChild(div);
   chatLog.scrollTop = chatLog.scrollHeight;
 }
-function narrarTexto(texto) {
-  const narrador = new SpeechSynthesisUtterance(texto);
-  narrador.lang = "es-ES";
-  narrador.rate = 1;
-  narrador.pitch = 1;
-  speechSynthesis.speak(narrador);
+
 }
 
