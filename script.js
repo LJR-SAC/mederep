@@ -20,7 +20,8 @@ function parseMarkdownToHTML(text) {
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
   const texto = userInput.value.trim();
-  const parsedContent = parseMarkdownToHTML(content);
+  if (!texto) return;
+  
 
   mensajes.push({ role: "user", content: texto });
   appendMessage("🧑 Usuario", texto);
