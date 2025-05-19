@@ -51,8 +51,9 @@ form.addEventListener("submit", async (e) => {
 
     if (data.choices && data.choices.length > 0) {
       const content = data.choices[0].message.content.trim();
-      mensajes.push({ role: "assistant", content });
-      appendMessage("👨‍⚕️ MedExpress", content);
+      const parsedContent = parseMarkdownToHTML(content);
+      mensajes.push({ role: "assistant", content: parsedContent });
+      appendMessage("👨‍⚕️ MedExpress", parsedContent);
     } else {
       appendMessage("❗Error", "La respuesta del servidor fue vacía.");
     }
