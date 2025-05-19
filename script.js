@@ -54,6 +54,7 @@ form.addEventListener("submit", async (e) => {
       const parsedContent = parseMarkdownToHTML(content);
       mensajes.push({ role: "assistant", content: parsedContent });
       appendMessage("👨‍⚕️ MedExpress", parsedContent);
+      narrarTexto(content);
     } else {
       appendMessage("❗Error", "La respuesta del servidor fue vacía.");
     }
@@ -73,4 +74,11 @@ function appendMessage(sender, message) {
   div.innerHTML = `<strong>${sender}:</strong> ${message}`;
   chatLog.appendChild(div);
   chatLog.scrollTop = chatLog.scrollHeight;
+}
+function narrarTexto(texto) {
+  const narrador = new SpeechSynthesisUtterance(texto);
+  narrador.lang = "es-ES";
+  narrador.rate = 1;
+  narrador.pitch = 1;
+  speechSynthesis.speak(narrador);
 }
